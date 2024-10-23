@@ -7,6 +7,10 @@ const geistSans = localFont({
   variable: "--font-geist-sans",
   weight: "100 900",
 });
+import React from 'react'
+
+
+
 const geistMono = localFont({
   src: "./fonts/GeistMonoVF.woff",
   variable: "--font-geist-mono",
@@ -22,14 +26,16 @@ export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
-}>) {
+}>)  {
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <body className="bg-slate-300"></body>
         {children}
       </body>
     </html>
   );
 }
+
